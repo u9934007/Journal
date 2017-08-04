@@ -88,8 +88,9 @@ class JournalManager {
         do {
 
             journalList = try managedObjectContext.fetch(JournalRequest)
-            journalList.remove(at: indexPathRow)
+            managedObjectContext.delete(journalList[indexPathRow])
             try self.managedObjectContext.save()
+            journalList.remove(at: indexPathRow)
             self.delegate?.manager(self, didEdit: journalList)
 
         } catch {

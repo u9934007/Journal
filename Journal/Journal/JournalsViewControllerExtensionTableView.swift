@@ -46,8 +46,7 @@ extension JournalsViewController: UITableViewDelegate, UITableViewDataSource {
 
         let delete = UITableViewRowAction(style: .normal, title: "Delete") { _, _ in
 
-            self.journalManager.deleteJournal(indexPathRow:indexPath.row )
-            tableView.reloadData()
+            self.journalManager.deleteJournal(indexPathRow:indexPath.row)
 
         }
 
