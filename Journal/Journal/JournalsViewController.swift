@@ -13,6 +13,7 @@ class JournalsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     var journalList: [JournalStruct] = []
     var passJournalInformation: JournalStruct?
+    var passIndexPathRow: Int? = 0
     let journalManager = JournalManager()
     @IBOutlet weak var journalsTableview: UITableView!
 
@@ -41,7 +42,7 @@ class JournalsViewController: UIViewController {
             let viewController = segue.destination as! JournalViewController
             // swiftlint:disable:previous force_cast
             viewController.journalInformation = self.passJournalInformation
-
+            viewController.indexPathRow = passIndexPathRow
         }
 
     }

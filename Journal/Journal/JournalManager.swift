@@ -14,6 +14,7 @@ protocol JournalManagerDelegate: class {
     func manager(_ manager: JournalManager, didGet journals: [Journal])
     func manager(_ manager: JournalManager, didFailWith error: String)
     func manager(_ manager: JournalManager, didSave journal: JournalStruct)
+    func manager(_ manager: JournalManager, didEdit journals: [Journal])
 
 }
 
@@ -57,4 +58,44 @@ class JournalManager {
         }
 
     }
+
+    func editJournal(journal: JournalStruct, indexPathRow: Int) {
+
+        var journalList = [Journal]()
+        let JournalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
+
+        do {
+
+            journalList = try managedObjectContext.fetch(JournalRequest)
+            journalList[indexPathRow].journalImage = NSData(data: UIImagePNGRepresentation(journal.image!)!)
+            journalList[indexPathRow].journalContent = journal.content
+            journalList[indexPathRow].journalTitle = journal.title
+
+            try self.managedObjectContext.save()
+            self.delegate?.manager(self, didEdit: journalList)
+
+        } catch {
+            self.delegate?.manager(self, didFailWith: error.localizedDescription)
+        }
+
+    }
+
+    func deleteJournal(indexPathRow: Int) {
+
+        var journalList = [Journal]()
+        let JournalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
+
+        do {
+
+            journalList = try managedObjectContext.fetch(JournalRequest)
+            journalList.remove(at: indexPathRow)
+            try self.managedObjectContext.save()
+            self.delegate?.manager(self, didEdit: journalList)
+
+        } catch {
+            self.delegate?.manager(self, didFailWith: error.localizedDescription)
+        }
+
+    }
+
 }

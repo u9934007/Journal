@@ -29,7 +29,32 @@ extension JournalsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         passJournalInformation = journalList[indexPath.row]
+        passIndexPathRow = indexPath.row
         self.performSegue(withIdentifier: "check", sender: self)
+
+    }
+
+    //設定Cell是否可以編輯
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+
+        return true
+
+    }
+
+    //設定編輯動作
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+
+        let delete = UITableViewRowAction(style: .normal, title: "Delete") { _, _ in
+
+            self.journalManager.deleteJournal(indexPathRow:indexPath.row )
+            tableView.reloadData()
+
+        }
+
+        delete.backgroundColor = UIColor.orange
+
+        return [delete]
+
     }
 
 }

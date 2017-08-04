@@ -11,6 +11,7 @@ import UIKit
 class JournalViewController: UIViewController {
 
     var journalInformation: JournalStruct?
+    var indexPathRow: Int?
 
     @IBOutlet weak var journalImageView: UIImageView!
     @IBOutlet weak var journalTitleTextField: UITextField!
@@ -36,22 +37,21 @@ class JournalViewController: UIViewController {
 
         journalTitleTextField.placeholder = "Title"
         journalContentTextView.placeholderText = "Content"
-
+        journalContentTextView.clipsToBounds = true
         if journalInformation?.title == "" {
 
             journalImageView.image = UIImage(named: "icon_photo")
 
         } else {
-        
+
             journalImageView.image = journalInformation?.image
             journalImageView.contentMode = .scaleAspectFill
+            journalContentTextView.clipsToBounds = true
             journalTitleTextField.text = journalInformation?.title
             journalContentTextView.text = journalInformation?.content
-        
+
         }
-        
-        
-        
+
     }
 
     @IBAction func pressBack(_ sender: Any) {
@@ -131,9 +131,14 @@ class JournalViewController: UIViewController {
 
         }
 
+        let changeJournal = JournalStruct(title: journalTitleTextField.text!, content: journalContentTextView.text!, image: journalImageView.image)
         if journalInformation?.title == "" {
 
-            journalManager.saveJournal(journal: JournalStruct(title: journalTitleTextField.text!, content: journalContentTextView.text!, image: journalImageView.image))
+            journalManager.saveJournal(journal:changeJournal)
+
+        } else {
+
+            journalManager.editJournal(journal: changeJournal, indexPathRow: indexPathRow!)
 
         }
 

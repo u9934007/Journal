@@ -31,7 +31,7 @@
                                     <constraint firstAttribute="width" secondItem="D8X-AW-uv9" secondAttribute="height" multiplier="1:1" id="FHc-Ad-9NZ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6y-kB-cdC">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6y-kB-cdC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                 <connections>
                                     <action selector="selectImage:" destination="lKz-u5-Uhx" eventType="touchUpInside" id="cfu-XK-Co5"/>

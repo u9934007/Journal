@@ -36,4 +36,18 @@ extension JournalsViewController:JournalManagerDelegate {
 
     }
 
+    func manager(_ manager: JournalManager, didEdit journals: [Journal]) {
+
+        var journalList: [JournalStruct] = []
+
+        for journal in journals {
+
+            journalList.append(JournalStruct(title:journal.journalTitle!, content: journal.journalContent!, image: UIImage(data:journal.journalImage! as Data)))
+        }
+
+        self.journalList = journalList
+
+        journalsTableview.reloadData()
+    }
+
 }
