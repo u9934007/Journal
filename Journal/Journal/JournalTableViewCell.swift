@@ -10,15 +10,23 @@ import UIKit
 
 class JournalTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var journalImageView: UIImageView!
+    @IBOutlet weak var journalTitleLabel: UILabel!
+    @IBOutlet weak var roundView: UIView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        
+        roundView.layer.cornerRadius = roundView.frame.size.height/2
+        roundView.layer.borderColor = UIColor.coolGrey.cgColor
+        roundView.layer.borderWidth = 0.5
+        journalImageView.shadowAndRadius()
+        journalTitleLabel.font = UIFont.textStyle24Font()
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+       
     }
 
 }
+

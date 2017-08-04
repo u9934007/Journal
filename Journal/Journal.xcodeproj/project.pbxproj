@@ -17,6 +17,7 @@
 		B2BA299C1F340AB80004494C /* JournalViewControllerExtensionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA299B1F340AB80004494C /* JournalViewControllerExtensionTableView.swift */; };
 		B2BA299E1F340AE30004494C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA299D1F340AE30004494C /* UIViewExtension.swift */; };
 		B2BA29A01F340B870004494C /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA299F1F340B870004494C /* JournalTableViewCell.swift */; };
+		B2BA29A21F340C5A0004494C /* JournalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29A11F340C5A0004494C /* JournalStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B2BA299B1F340AB80004494C /* JournalViewControllerExtensionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewControllerExtensionTableView.swift; sourceTree = "<group>"; };
 		B2BA299D1F340AE30004494C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		B2BA299F1F340B870004494C /* JournalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
+		B2BA29A11F340C5A0004494C /* JournalStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				B2BA29791F34004A0004494C /* AppDelegate.swift */,
 				B2BA297B1F34004A0004494C /* JournalViewController.swift */,
 				B2BA299B1F340AB80004494C /* JournalViewControllerExtensionTableView.swift */,
+				B2BA29A11F340C5A0004494C /* JournalStruct.swift */,
 				B2BA297D1F34004A0004494C /* Main.storyboard */,
 				B2BA299F1F340B870004494C /* JournalTableViewCell.swift */,
 				B2BA29801F34004A0004494C /* Assets.xcassets */,
@@ -175,6 +178,7 @@
 				B2BA29981F34052A0004494C /* JournalModel.xcdatamodeld in Sources */,
 				B2BA297C1F34004A0004494C /* JournalViewController.swift in Sources */,
 				B2BA297A1F34004A0004494C /* AppDelegate.swift in Sources */,
+				B2BA29A21F340C5A0004494C /* JournalStruct.swift in Sources */,
 				B2BA299C1F340AB80004494C /* JournalViewControllerExtensionTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

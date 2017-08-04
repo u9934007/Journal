@@ -9,12 +9,17 @@
 import UIKit
 
 
-class JournalViewController: UIViewController {
+class JournalsViewController: UIViewController {
 
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    var journalList: [JournalStruct] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        
+        titleLabel.font = UIFont.textStyle24Font()
     
     
     }
