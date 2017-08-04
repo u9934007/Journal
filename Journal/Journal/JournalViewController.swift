@@ -22,7 +22,6 @@ class JournalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         journalManager.delegate = mainViewController
 
@@ -37,6 +36,7 @@ class JournalViewController: UIViewController {
         journalTitleTextField.placeholder = "Title"
         journalContentTextView.placeholderText = "Content"
         journalContentTextView.clipsToBounds = true
+
         if journalInformation?.title == "" {
 
             journalImageView.image = UIImage(named: "icon_photo")
@@ -131,7 +131,7 @@ class JournalViewController: UIViewController {
         }
 
         let changeJournal = JournalStruct(title: journalTitleTextField.text!, content: journalContentTextView.text!, image: journalImageView.image)
-        
+
         if journalInformation?.title == "" {
 
             journalManager.saveJournal(journal:changeJournal)
