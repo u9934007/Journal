@@ -27,15 +27,13 @@ class JournalViewController: UIViewController {
 
         journalTitleTextField.font = UIFont.textStyle26Font()
         journalContentTextView.font = UIFont.textStyle27Font()
-        saveButton.layer.cornerRadius = 22
-        saveButton.layer.shadowOpacity = 1
-        saveButton.layer.shadowRadius = 10
-        saveButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        saveButton.layer.shadowColor = UIColor.blush.cgColor
+        saveButton.buttonShadow()
 
         journalTitleTextField.placeholder = "Title"
         journalContentTextView.placeholderText = "Content"
         journalContentTextView.clipsToBounds = true
+        
+        journalImageView.bigShadow()
 
         if journalInformation?.title == "" {
 
