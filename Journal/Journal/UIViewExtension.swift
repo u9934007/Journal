@@ -29,17 +29,6 @@ extension UIView {
         self.layer.shadowColor = UIColor.blush.cgColor
 
     }
-    
-    
-    func bigShadow() {
-        
-        self.layer.shadowOpacity = 2
-        self.layer.shadowRadius = 20
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.shadowColor = UIColor.white.cgColor
-        
-    }
-
 
 }
 

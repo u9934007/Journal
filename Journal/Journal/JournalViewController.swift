@@ -32,8 +32,6 @@ class JournalViewController: UIViewController {
         journalTitleTextField.placeholder = "Title"
         journalContentTextView.placeholderText = "Content"
         journalContentTextView.clipsToBounds = true
-        
-        journalImageView.bigShadow()
 
         if journalInformation?.title == "" {
 
