@@ -100,6 +100,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="4w5-5n-ZFh" firstAttribute="top" secondItem="G15-e6-7XE" secondAttribute="bottom" constant="8" id="3XB-IO-DfE"/>
                             <constraint firstItem="V2C-eg-4kn" firstAttribute="leading" secondItem="2S1-Cm-tew" secondAttribute="leading" id="3qL-Yl-G3D"/>
                             <constraint firstItem="G15-e6-7XE" firstAttribute="centerX" secondItem="kZK-xa-Mki" secondAttribute="centerX" id="4Wq-H8-1ng"/>
                             <constraint firstItem="D8X-AW-uv9" firstAttribute="leading" secondItem="kZK-xa-Mki" secondAttribute="leading" id="9qg-Bg-LlN"/>
@@ -120,7 +121,6 @@
                             <constraint firstItem="xZe-Ri-ijg" firstAttribute="trailing" secondItem="V2C-eg-4kn" secondAttribute="trailing" id="fWu-yJ-wOR"/>
                             <constraint firstAttribute="trailing" secondItem="D8X-AW-uv9" secondAttribute="trailing" id="g52-k5-5nn"/>
                             <constraint firstItem="xQY-iD-hUZ" firstAttribute="leading" secondItem="kZK-xa-Mki" secondAttribute="leading" constant="20" id="hW8-DE-ekZ"/>
-                            <constraint firstItem="xZe-Ri-ijg" firstAttribute="height" secondItem="kZK-xa-Mki" secondAttribute="height" multiplier="162:667" id="iJk-rr-L6W"/>
                             <constraint firstItem="Ioq-rQ-MV6" firstAttribute="bottom" secondItem="D8X-AW-uv9" secondAttribute="bottom" id="n9m-OJ-MLd"/>
                             <constraint firstItem="xZe-Ri-ijg" firstAttribute="top" secondItem="V2C-eg-4kn" secondAttribute="bottom" constant="9.5" id="qh2-pf-2T2"/>
                             <constraint firstItem="Ioq-rQ-MV6" firstAttribute="trailing" secondItem="D8X-AW-uv9" secondAttribute="trailing" id="tAa-td-0Xh"/>
@@ -180,6 +180,7 @@
                                         <constraint firstItem="ZPi-uO-Tkr" firstAttribute="leading" secondItem="14X-yS-NQP" secondAttribute="leading" constant="30" id="5Az-97-KwS"/>
                                         <constraint firstAttribute="trailing" secondItem="2r7-OB-MBu" secondAttribute="trailing" constant="8" id="DsC-Pg-5M6"/>
                                         <constraint firstItem="2r7-OB-MBu" firstAttribute="centerY" secondItem="14X-yS-NQP" secondAttribute="centerY" id="TSL-Q3-HZa"/>
+                                        <constraint firstItem="ZPi-uO-Tkr" firstAttribute="top" secondItem="14X-yS-NQP" secondAttribute="top" constant="14" id="YUq-2M-wQL"/>
                                         <constraint firstItem="2r7-OB-MBu" firstAttribute="leading" secondItem="ZPi-uO-Tkr" secondAttribute="trailing" id="eEC-4f-HTD"/>
                                         <constraint firstItem="ZPi-uO-Tkr" firstAttribute="centerY" secondItem="14X-yS-NQP" secondAttribute="centerY" id="rF3-eT-Zh6"/>
                                     </constraints>
@@ -205,7 +206,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gw6-w6-LcB">
                                                     <rect key="frame" x="19.5" y="10" width="335" height="140"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="140" id="xA6-Oj-oHP"/>
+                                                        <constraint firstAttribute="width" secondItem="gw6-w6-LcB" secondAttribute="height" multiplier="67:28" id="Q0i-IU-4hR"/>
                                                     </constraints>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GU-2U-YdS">
