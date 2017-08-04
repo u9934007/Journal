@@ -14,9 +14,19 @@ extension UIView {
 
         self.layer.cornerRadius = 8
         self.layer.shadowOpacity = 1
-        self.layer.shadowRadius = 10
+        self.layer.shadowRadius = 5
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.layer.shadowColor = UIColor.coolGrey.cgColor
+
+    }
+
+    func buttonShadow() {
+
+        self.layer.cornerRadius = 22
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 10
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowColor = UIColor.blush.cgColor
 
     }
 

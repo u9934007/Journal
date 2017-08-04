@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension JournalsViewController:JournalManagerDelegate {
+extension JournalsViewController: JournalManagerDelegate {
 
     func manager(_ manager: JournalManager, didGet journals: [Journal]) {
 

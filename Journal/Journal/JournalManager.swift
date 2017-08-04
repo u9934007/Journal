@@ -32,6 +32,7 @@ class JournalManager {
         let JournalRequest: NSFetchRequest<Journal> = Journal.fetchRequest()
 
         do {
+
             journalList = try managedObjectContext.fetch(JournalRequest)
             self.delegate?.manager(self, didGet: journalList)
 
@@ -54,7 +55,9 @@ class JournalManager {
             self.delegate?.manager(self, didSave: journal)
 
         } catch {
+
             self.delegate?.manager(self, didFailWith: error.localizedDescription)
+
         }
 
     }
@@ -75,7 +78,9 @@ class JournalManager {
             self.delegate?.manager(self, didEdit: journalList)
 
         } catch {
+
             self.delegate?.manager(self, didFailWith: error.localizedDescription)
+
         }
 
     }
@@ -88,12 +93,15 @@ class JournalManager {
         do {
 
             journalList = try managedObjectContext.fetch(JournalRequest)
-            journalList.remove(at: indexPathRow)
+            managedObjectContext.delete(journalList[indexPathRow])
             try self.managedObjectContext.save()
+            journalList.remove(at: indexPathRow)
             self.delegate?.manager(self, didEdit: journalList)
 
         } catch {
+
             self.delegate?.manager(self, didFailWith: error.localizedDescription)
+
         }
 
     }

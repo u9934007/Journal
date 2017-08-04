@@ -41,4 +41,9 @@ extension UIColor {
     class var blush: UIColor {
         return UIColor(red: 247.0 / 255.0, green: 174.0 / 255.0, blue: 163.0 / 255.0, alpha: 1.0)
     }
+
+    class var dustyOrange: UIColor {
+        return UIColor(red: 237.0 / 255.0, green: 96.0 / 255.0, blue: 81.0 / 255.0, alpha: 1.0)
+    }
+
 }

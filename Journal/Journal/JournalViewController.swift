@@ -18,26 +18,21 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var journalContentTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
 
-    var selectedImage: UIImage?
     let journalManager = JournalManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         journalManager.delegate = mainViewController
 
         journalTitleTextField.font = UIFont.textStyle26Font()
         journalContentTextView.font = UIFont.textStyle27Font()
-        saveButton.layer.cornerRadius = 22
-        saveButton.layer.shadowOpacity = 1
-        saveButton.layer.shadowRadius = 10
-        saveButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        saveButton.layer.shadowColor = UIColor.blush.cgColor
+        saveButton.buttonShadow()
 
         journalTitleTextField.placeholder = "Title"
         journalContentTextView.placeholderText = "Content"
         journalContentTextView.clipsToBounds = true
+
         if journalInformation?.title == "" {
 
             journalImageView.image = UIImage(named: "icon_photo")
@@ -132,6 +127,7 @@ class JournalViewController: UIViewController {
         }
 
         let changeJournal = JournalStruct(title: journalTitleTextField.text!, content: journalContentTextView.text!, image: journalImageView.image)
+
         if journalInformation?.title == "" {
 
             journalManager.saveJournal(journal:changeJournal)

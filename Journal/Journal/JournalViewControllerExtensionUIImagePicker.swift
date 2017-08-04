@@ -22,7 +22,6 @@ extension JournalViewController: UIImagePickerControllerDelegate, UINavigationCo
             picker.dismiss(animated: true, completion: {
 
                 let resizeImage = image.resizeImageWith(newSize: CGSize(width: 375, height: 375))
-                self.selectedImage = resizeImage
                 self.journalImageView.image = resizeImage
                 self.journalImageView.contentMode = .scaleAspectFill
 

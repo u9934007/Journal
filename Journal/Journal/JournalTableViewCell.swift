@@ -14,6 +14,7 @@ class JournalTableViewCell: UITableViewCell {
     @IBOutlet weak var journalTitleLabel: UILabel!
     @IBOutlet weak var roundView: UIView!
 
+    @IBOutlet weak var shadowView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -21,8 +22,9 @@ class JournalTableViewCell: UITableViewCell {
         roundView.layer.borderColor = UIColor.coolGrey.cgColor
         roundView.layer.borderWidth = 0.5
         journalImageView.shadowAndRadius()
-        journalTitleLabel.font = UIFont.textStyle24Font()
-
+        journalTitleLabel.font = UIFont.textStyle25Font()
+        journalTitleLabel.textColor = UIColor.slate
+        shadowView.shadowAndRadius()
     }
 
 }
