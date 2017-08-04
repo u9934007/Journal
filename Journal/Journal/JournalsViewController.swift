@@ -13,12 +13,16 @@ class JournalsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     var journalList: [JournalStruct] = []
     var passJournalInformation: JournalStruct?
+    let journalManager = JournalManager()
+    @IBOutlet weak var journalsTableview: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        mainViewController = self
         titleLabel.font = UIFont.textStyle24Font()
+        journalManager.delegate = self
+        journalManager.getJournals()
 
     }
 

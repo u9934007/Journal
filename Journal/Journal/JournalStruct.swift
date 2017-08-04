@@ -15,3 +15,5 @@ struct JournalStruct {
     var image: UIImage?
 
 }
+
+var mainViewController: JournalsViewController?

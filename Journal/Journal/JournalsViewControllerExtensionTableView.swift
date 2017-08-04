@@ -21,7 +21,8 @@ extension JournalsViewController: UITableViewDelegate, UITableViewDataSource {
 
         cell.journalTitleLabel.text = journalList[indexPath.row].title
         cell.journalImageView.image = journalList[indexPath.row].image
-
+        cell.selectionStyle = .none
+        
         return cell
     }
 

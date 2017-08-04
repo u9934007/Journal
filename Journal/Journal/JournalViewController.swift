@@ -16,11 +16,16 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var journalTitleTextField: UITextField!
     @IBOutlet weak var journalContentTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
-
+    
+    var selectedImage: UIImage?
+    let journalManager = JournalManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
+        journalManager.delegate = mainViewController
+        
         journalTitleTextField.font = UIFont.textStyle26Font()
         journalContentTextView.font = UIFont.textStyle27Font()
         saveButton.layer.cornerRadius = 22
@@ -32,7 +37,9 @@ class JournalViewController: UIViewController {
         journalTitleTextField.placeholder = "Title"
         journalContentTextView.placeholderText = "Content"
 
-        if journalInformation?.title != ""{
+        if journalInformation?.title == ""{
+            
+            journalImageView.image = UIImage(named: "icon_photo")
 
         }
     }
@@ -90,9 +97,49 @@ class JournalViewController: UIViewController {
             return
 
         }
-
+        
+        if journalImageView.image == UIImage(named: "icon_photo") {
+            
+            let alertController = UIAlertController(
+                title: "Please select Image",
+                message: "",
+                preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(
+                title: "ok",
+                style: UIAlertActionStyle.default,
+                handler: nil)
+            
+            alertController.addAction(cancelAction)
+            // 顯示提示框
+            self.present(
+                alertController,
+                animated: true,
+                completion: nil)
+            
+            return
+            
+        }
+        
+        if journalInformation?.title == "" {
+            
+            journalManager.saveJournal(journal: JournalStruct(title: journalTitleTextField.text!,content: journalContentTextView.text!,image: journalImageView.image))
+            
+        }
+        
+        
         self.dismiss(animated: true, completion: nil)
 
+    }
+    
+    
+    @IBAction func selectImage(_ sender: Any) {
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true, completion: nil)
+        
     }
 
 }

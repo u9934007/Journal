@@ -31,6 +31,12 @@
                                     <constraint firstAttribute="width" secondItem="D8X-AW-uv9" secondAttribute="height" multiplier="1:1" id="FHc-Ad-9NZ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6y-kB-cdC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="lKz-u5-Uhx" eventType="touchUpInside" id="cfu-XK-Co5"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2C-eg-4kn">
                                 <rect key="frame" x="22" y="431" width="331" height="0.5"/>
                                 <color key="backgroundColor" red="0.6705882352941176" green="0.70196078431372544" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,9 +94,13 @@
                             <constraint firstItem="V2C-eg-4kn" firstAttribute="trailing" secondItem="2S1-Cm-tew" secondAttribute="trailing" id="NJc-Sd-PjI"/>
                             <constraint firstItem="2S1-Cm-tew" firstAttribute="centerX" secondItem="kZK-xa-Mki" secondAttribute="centerX" id="Okh-kq-vEI"/>
                             <constraint firstItem="2S1-Cm-tew" firstAttribute="top" secondItem="D8X-AW-uv9" secondAttribute="bottom" constant="10" id="PY8-pU-6Zu"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="leading" secondItem="D8X-AW-uv9" secondAttribute="leading" id="RRK-Bz-qyc"/>
                             <constraint firstItem="xQY-iD-hUZ" firstAttribute="top" secondItem="kZK-xa-Mki" secondAttribute="top" constant="25" id="VMw-pl-JNL"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="trailing" secondItem="D8X-AW-uv9" secondAttribute="trailing" id="Wex-Ch-07r"/>
                             <constraint firstItem="D8X-AW-uv9" firstAttribute="top" secondItem="Z2V-vO-xah" secondAttribute="bottom" constant="-20" id="Xl4-Ef-Bz6"/>
                             <constraint firstItem="xZe-Ri-ijg" firstAttribute="leading" secondItem="V2C-eg-4kn" secondAttribute="leading" id="ZZ6-8x-akq"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="top" secondItem="D8X-AW-uv9" secondAttribute="top" id="cEi-gE-U2O"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="bottom" secondItem="D8X-AW-uv9" secondAttribute="bottom" id="e4x-qS-1TP"/>
                             <constraint firstItem="2S1-Cm-tew" firstAttribute="width" secondItem="kZK-xa-Mki" secondAttribute="width" multiplier="331:375" id="fV8-na-p7d"/>
                             <constraint firstItem="xZe-Ri-ijg" firstAttribute="trailing" secondItem="V2C-eg-4kn" secondAttribute="trailing" id="fWu-yJ-wOR"/>
                             <constraint firstAttribute="trailing" secondItem="D8X-AW-uv9" secondAttribute="trailing" id="g52-k5-5nn"/>
@@ -230,6 +240,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="journalsTableview" destination="hS6-JY-DWg" id="mR4-X7-FUq"/>
                         <outlet property="titleLabel" destination="ZPi-uO-Tkr" id="aj0-fL-8kk"/>
                         <segue destination="lKz-u5-Uhx" kind="presentation" identifier="build" id="PMF-Nu-ANG"/>
                     </connections>
