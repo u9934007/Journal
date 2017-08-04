@@ -156,7 +156,7 @@ class JournalViewController: UIViewController {
 
         alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(_: UIAlertAction) in
 
-            if UIImagePickerController.isSourceTypeAvailable(.camera){
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
 
                 imagePicker.sourceType = .camera
                 self.present(imagePicker, animated: true, completion: nil)
