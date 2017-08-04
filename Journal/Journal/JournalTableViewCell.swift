@@ -22,6 +22,7 @@ class JournalTableViewCell: UITableViewCell {
         roundView.layer.borderWidth = 0.5
         journalImageView.shadowAndRadius()
         journalTitleLabel.font = UIFont.textStyle24Font()
+        journalTitleLabel.textColor = UIColor.slate
 
     }
 

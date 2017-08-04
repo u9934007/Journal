@@ -18,7 +18,6 @@ class JournalViewController: UIViewController {
     @IBOutlet weak var journalContentTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
 
-    var selectedImage: UIImage?
     let journalManager = JournalManager()
 
     override func viewDidLoad() {
@@ -132,6 +131,7 @@ class JournalViewController: UIViewController {
         }
 
         let changeJournal = JournalStruct(title: journalTitleTextField.text!, content: journalContentTextView.text!, image: journalImageView.image)
+        
         if journalInformation?.title == "" {
 
             journalManager.saveJournal(journal:changeJournal)
