@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		B2BA297A1F34004A0004494C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29791F34004A0004494C /* AppDelegate.swift */; };
-		B2BA297C1F34004A0004494C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA297B1F34004A0004494C /* ViewController.swift */; };
+		B2BA297C1F34004A0004494C /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA297B1F34004A0004494C /* JournalViewController.swift */; };
 		B2BA297F1F34004A0004494C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA297D1F34004A0004494C /* Main.storyboard */; };
 		B2BA29811F34004A0004494C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA29801F34004A0004494C /* Assets.xcassets */; };
 		B2BA29841F34004A0004494C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA29821F34004A0004494C /* LaunchScreen.storyboard */; };
+		B2BA29981F34052A0004494C /* JournalModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29961F34052A0004494C /* JournalModel.xcdatamodeld */; };
+		B2BA299A1F3406900004494C /* ColorAndFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29991F3406900004494C /* ColorAndFontExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B2BA29761F34004A0004494C /* Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Journal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA29791F34004A0004494C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2BA297B1F34004A0004494C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2BA297B1F34004A0004494C /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		B2BA297E1F34004A0004494C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA29801F34004A0004494C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA29831F34004A0004494C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2BA29851F34004A0004494C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2BA29971F34052A0004494C /* JournalModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalModel.xcdatamodel; sourceTree = "<group>"; };
+		B2BA29991F3406900004494C /* ColorAndFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAndFontExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				B2BA29791F34004A0004494C /* AppDelegate.swift */,
-				B2BA297B1F34004A0004494C /* ViewController.swift */,
+				B2BA297B1F34004A0004494C /* JournalViewController.swift */,
 				B2BA297D1F34004A0004494C /* Main.storyboard */,
 				B2BA29801F34004A0004494C /* Assets.xcassets */,
 				B2BA29821F34004A0004494C /* LaunchScreen.storyboard */,
+				B2BA29991F3406900004494C /* ColorAndFontExtension.swift */,
 				B2BA29851F34004A0004494C /* Info.plist */,
+				B2BA29961F34052A0004494C /* JournalModel.xcdatamodeld */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -154,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2BA297C1F34004A0004494C /* ViewController.swift in Sources */,
+				B2BA299A1F3406900004494C /* ColorAndFontExtension.swift in Sources */,
+				B2BA29981F34052A0004494C /* JournalModel.xcdatamodeld in Sources */,
+				B2BA297C1F34004A0004494C /* JournalViewController.swift in Sources */,
 				B2BA297A1F34004A0004494C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +329,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B2BA29961F34052A0004494C /* JournalModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2BA29971F34052A0004494C /* JournalModel.xcdatamodel */,
+			);
+			currentVersion = B2BA29971F34052A0004494C /* JournalModel.xcdatamodel */;
+			path = JournalModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B2BA296E1F34004A0004494C /* Project object */;
 }
