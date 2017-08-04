@@ -19,3 +19,14 @@ extension UIFont {
 
 
 }
+
+
+
+
+extension UIColor {
+
+    class var slate: UIColor {
+        return UIColor(red: 67.0 / 255.0, green: 87.0 / 255.0, blue: 97.0 / 255.0, alpha: 1.0)
+    }
+}
+
