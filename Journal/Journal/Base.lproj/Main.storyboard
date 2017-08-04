@@ -45,7 +45,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2S1-Cm-tew">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2S1-Cm-tew">
                                 <rect key="frame" x="22" y="385" width="331" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="9Bm-0T-lHu"/>
@@ -63,6 +63,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="pressSave:" destination="lKz-u5-Uhx" eventType="touchUpInside" id="GxY-Z9-NBD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQY-iD-hUZ">
                                 <rect key="frame" x="20" y="25" width="36" height="36"/>
@@ -137,7 +140,7 @@
                                             <color key="tintColor" red="0.92941176470588238" green="0.37647058823529411" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" backgroundImage="icon_plus"/>
                                             <connections>
-                                                <segue destination="lKz-u5-Uhx" kind="presentation" id="JXu-uP-U2R"/>
+                                                <segue destination="lKz-u5-Uhx" kind="presentation" identifier="build" id="JXu-uP-U2R"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Journals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-uO-Tkr">
@@ -209,7 +212,7 @@
                                             <outlet property="journalImageView" destination="gw6-w6-LcB" id="HRN-pH-swu"/>
                                             <outlet property="journalTitleLabel" destination="qfA-Io-4ku" id="MaY-ou-1A1"/>
                                             <outlet property="roundView" destination="GOz-Nv-xIW" id="1LG-cq-Gpp"/>
-                                            <segue destination="lKz-u5-Uhx" kind="presentation" id="2MQ-S7-8PC"/>
+                                            <segue destination="lKz-u5-Uhx" kind="presentation" identifier="check" id="2MQ-S7-8PC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -242,6 +245,6 @@
         <image name="icon_plus" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JXu-uP-U2R"/>
+        <segue reference="2MQ-S7-8PC"/>
     </inferredMetricsTieBreakers>
 </document>
