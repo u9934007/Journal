@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Journal View Controller-->
         <scene sceneID="EsF-0q-6mx">
             <objects>
-                <viewController id="lKz-u5-Uhx" sceneMemberID="viewController">
+                <viewController id="lKz-u5-Uhx" customClass="JournalViewController" customModule="Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z2V-vO-xah"/>
                         <viewControllerLayoutGuide type="bottom" id="4w5-5n-ZFh"/>
@@ -70,7 +70,11 @@
                                     <constraint firstAttribute="width" constant="36" id="X0T-AR-ehC"/>
                                     <constraint firstAttribute="height" constant="36" id="r4V-WT-SUX"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" backgroundImage="button_close"/>
+                                <connections>
+                                    <action selector="pressBack:" destination="lKz-u5-Uhx" eventType="touchUpInside" id="Mlk-QZ-mMP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,6 +98,12 @@
                             <constraint firstItem="V2C-eg-4kn" firstAttribute="top" secondItem="2S1-Cm-tew" secondAttribute="bottom" constant="10" id="ujq-7z-FgF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="journalContentTextView" destination="xZe-Ri-ijg" id="l2E-Sn-3mL"/>
+                        <outlet property="journalImageView" destination="D8X-AW-uv9" id="LpF-3s-EWA"/>
+                        <outlet property="journalTitleTextField" destination="2S1-Cm-tew" id="wT8-so-N3G"/>
+                        <outlet property="saveButton" destination="G15-e6-7XE" id="UK0-8R-inf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXf-4O-2Bk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

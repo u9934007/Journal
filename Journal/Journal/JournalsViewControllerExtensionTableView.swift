@@ -1,5 +1,5 @@
 //
-//  JournalViewControllerExtensionTableView.swift
+//  JournalsViewControllerExtensionTableView.swift
 //  Journal
 //
 //  Created by 楊采庭 on 2017/8/4.

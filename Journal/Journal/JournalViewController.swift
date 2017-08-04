@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  JournalViewController.swift
 //  Journal
 //
 //  Created by 楊采庭 on 2017/8/4.
@@ -9,22 +9,33 @@
 import UIKit
 
 
-class JournalsViewController: UIViewController {
-
+class JournalViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    var journalList: [JournalStruct] = []
+    var passJournalInformation: JournalStruct?
+    
+    @IBOutlet weak var journalImageView: UIImageView!
+    @IBOutlet weak var journalTitleTextField: UITextField!
+    @IBOutlet weak var journalContentTextView: UITextView!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+     
         
-        titleLabel.font = UIFont.textStyle24Font()
-    
-    
+        journalTitleTextField.font = UIFont.textStyle26Font()
+        journalContentTextView.font = UIFont.textStyle27Font()
+
+        
     }
-
+    
     
 
+    @IBAction func pressBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 }
 

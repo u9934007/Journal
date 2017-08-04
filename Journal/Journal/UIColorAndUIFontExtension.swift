@@ -18,7 +18,13 @@ extension UIFont {
         return UIFont.systemFont(ofSize: 14.0, weight: UIFontWeightRegular)
     }
 
-
+    class func textStyle26Font() -> UIFont {
+        return UIFont.systemFont(ofSize: 30.0, weight: UIFontWeightRegular)
+    }
+    
+    class func textStyle27Font() -> UIFont {
+        return UIFont.systemFont(ofSize: 18.0, weight: UIFontWeightRegular)
+    }
 
 }
 
