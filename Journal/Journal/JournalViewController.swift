@@ -126,7 +126,9 @@ class JournalViewController: UIViewController {
 
         }
 
-        let changeJournal = JournalStruct(title: journalTitleTextField.text!, content: journalContentTextView.text!, image: journalImageView.image)
+        let changeJournal = JournalStruct(title: journalTitleTextField.text!,
+                                          content: journalContentTextView.text!,
+                                          image: journalImageView.image)
 
         if journalInformation?.title == "" {
 
@@ -147,10 +149,10 @@ class JournalViewController: UIViewController {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
 
-        let alertController = UIAlertController(
-            title: "Photo Source",
-            message: "Choose a source",
-            preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Photo Source",
+                                                message: "Choose a source",
+                                                preferredStyle: .actionSheet
+        )
 
         alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(_: UIAlertAction) in
 
@@ -167,13 +169,17 @@ class JournalViewController: UIViewController {
 
         }))
 
-        alertController.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {(_: UIAlertAction) in
+        alertController.addAction(UIAlertAction(title: "Photo Library",
+                                                style: .default,
+                                                handler: {(_: UIAlertAction) in
             imagePicker.sourceType = .photoLibrary
             self.present(imagePicker, animated: true, completion: nil)
 
         }))
 
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Cancel",
+                                                style: .default,
+                                                handler: nil))
 
         self.present(alertController, animated: true, completion: nil)
 
