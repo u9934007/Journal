@@ -181,7 +181,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gw6-w6-LcB">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gw6-w6-LcB">
                                                     <rect key="frame" x="19.5" y="10" width="335" height="140"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="140" id="xA6-Oj-oHP"/>
@@ -221,7 +221,6 @@
                                             <outlet property="journalImageView" destination="gw6-w6-LcB" id="HRN-pH-swu"/>
                                             <outlet property="journalTitleLabel" destination="qfA-Io-4ku" id="MaY-ou-1A1"/>
                                             <outlet property="roundView" destination="GOz-Nv-xIW" id="1LG-cq-Gpp"/>
-                                            <segue destination="lKz-u5-Uhx" kind="presentation" identifier="check" id="2MQ-S7-8PC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -243,6 +242,7 @@
                         <outlet property="journalsTableview" destination="hS6-JY-DWg" id="mR4-X7-FUq"/>
                         <outlet property="titleLabel" destination="ZPi-uO-Tkr" id="aj0-fL-8kk"/>
                         <segue destination="lKz-u5-Uhx" kind="presentation" identifier="build" id="PMF-Nu-ANG"/>
+                        <segue destination="lKz-u5-Uhx" kind="presentation" identifier="check" id="4GC-GI-aDF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUh-oD-isn" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -40,24 +40,21 @@ class JournalManager {
         }
 
     }
-    
-    
-    func saveJournal(journal: JournalStruct){
-        
+
+    func saveJournal(journal: JournalStruct) {
+
         do {
-            
+
             let saveJournal = Journal(context: managedObjectContext)
             saveJournal.journalImage = NSData(data: UIImagePNGRepresentation(journal.image!)!)
             saveJournal.journalContent = journal.content
             saveJournal.journalTitle = journal.title
             try self.managedObjectContext.save()
             self.delegate?.manager(self, didSave: journal)
-            
+
         } catch {
             self.delegate?.manager(self, didFailWith: error.localizedDescription)
         }
-        
-    
-    
+
     }
 }

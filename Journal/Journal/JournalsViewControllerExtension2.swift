@@ -22,18 +22,18 @@ extension JournalsViewController:JournalManagerDelegate {
         self.journalList = journalList
 
     }
-    
+
     func manager(_ manager: JournalManager, didFailWith error: String) {
-    
+
         print(error)
-        
+
     }
-    
+
     func manager(_ manager: JournalManager, didSave journal: JournalStruct) {
-        
+
         journalList.append(journal)
         journalsTableview.reloadData()
-    
+
     }
 
 }

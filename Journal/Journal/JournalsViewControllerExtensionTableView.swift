@@ -22,14 +22,14 @@ extension JournalsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.journalTitleLabel.text = journalList[indexPath.row].title
         cell.journalImageView.image = journalList[indexPath.row].image
         cell.selectionStyle = .none
-        
+
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         passJournalInformation = journalList[indexPath.row]
-
+        self.performSegue(withIdentifier: "check", sender: self)
     }
 
 }
