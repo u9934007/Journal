@@ -28,12 +28,12 @@ class JournalViewController: UIViewController {
         saveButton.layer.shadowRadius = 10
         saveButton.layer.shadowOffset = CGSize(width: 0, height: 0)
         saveButton.layer.shadowColor = UIColor.blush.cgColor
-        
-        
-        if journalInformation?.title == ""{
-        
-            journalTitleTextField.placeholder = "Title"
-        
+
+        journalTitleTextField.placeholder = "Title"
+        journalContentTextView.placeholderText = "Content"
+
+        if journalInformation?.title != ""{
+
         }
     }
 
@@ -42,10 +42,57 @@ class JournalViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
 
     }
-    
-    
+
     @IBAction func pressSave(_ sender: Any) {
+
+        if journalTitleTextField.text == "" {
+
+            let alertController = UIAlertController(
+                title: "Please enter title",
+                message: "",
+                preferredStyle: .alert)
+
+            let cancelAction = UIAlertAction(
+                title: "ok",
+                style: UIAlertActionStyle.default,
+                handler: nil)
+
+            alertController.addAction(cancelAction)
+            // 顯示提示框
+            self.present(
+                alertController,
+                animated: true,
+                completion: nil)
+
+            return
+
+        }
+
+        if journalContentTextView.text == "" {
+
+            let alertController = UIAlertController(
+                title: "Please enter content",
+                message: "",
+                preferredStyle: .alert)
+
+            let cancelAction = UIAlertAction(
+                title: "ok",
+                style: UIAlertActionStyle.default,
+                handler: nil)
+
+            alertController.addAction(cancelAction)
+            // 顯示提示框
+            self.present(
+                alertController,
+                animated: true,
+                completion: nil)
+
+            return
+
+        }
+
+        self.dismiss(animated: true, completion: nil)
+
     }
-    
 
 }

@@ -22,18 +22,23 @@ class JournalsViewController: UIViewController {
 
     }
 
+    @IBAction func pressBuild(_ sender: Any) {
+
+        passJournalInformation = JournalStruct(title: "", content: "", image: nil )
+        self.performSegue(withIdentifier: "build", sender: self)
+
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if segue.identifier == "check" || segue.identifier == "build" {
-            
+
             // swiftlint:disable:next force_cast
             let viewController = segue.destination as! JournalViewController
             // swiftlint:disable:previous force_cast
             viewController.journalInformation = self.passJournalInformation
-        
-        }
 
-      
+        }
 
     }
 
