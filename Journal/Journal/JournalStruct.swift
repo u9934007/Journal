@@ -9,9 +9,11 @@
 import UIKit
 
 struct JournalStruct {
-    
+
     var title: String
     var content: String
-    var image: UIImage
+    var image: UIImage?
 
 }
+
+var mainViewController: JournalsViewController?

@@ -31,6 +31,12 @@
                                     <constraint firstAttribute="width" secondItem="D8X-AW-uv9" secondAttribute="height" multiplier="1:1" id="FHc-Ad-9NZ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6y-kB-cdC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <connections>
+                                    <action selector="selectImage:" destination="lKz-u5-Uhx" eventType="touchUpInside" id="cfu-XK-Co5"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2C-eg-4kn">
                                 <rect key="frame" x="22" y="431" width="331" height="0.5"/>
                                 <color key="backgroundColor" red="0.6705882352941176" green="0.70196078431372544" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,11 +47,10 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xZe-Ri-ijg">
                                 <rect key="frame" x="22" y="441" width="331" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2S1-Cm-tew">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2S1-Cm-tew">
                                 <rect key="frame" x="22" y="385" width="331" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="9Bm-0T-lHu"/>
@@ -63,6 +68,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="pressSave:" destination="lKz-u5-Uhx" eventType="touchUpInside" id="GxY-Z9-NBD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQY-iD-hUZ">
                                 <rect key="frame" x="20" y="25" width="36" height="36"/>
@@ -86,9 +94,13 @@
                             <constraint firstItem="V2C-eg-4kn" firstAttribute="trailing" secondItem="2S1-Cm-tew" secondAttribute="trailing" id="NJc-Sd-PjI"/>
                             <constraint firstItem="2S1-Cm-tew" firstAttribute="centerX" secondItem="kZK-xa-Mki" secondAttribute="centerX" id="Okh-kq-vEI"/>
                             <constraint firstItem="2S1-Cm-tew" firstAttribute="top" secondItem="D8X-AW-uv9" secondAttribute="bottom" constant="10" id="PY8-pU-6Zu"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="leading" secondItem="D8X-AW-uv9" secondAttribute="leading" id="RRK-Bz-qyc"/>
                             <constraint firstItem="xQY-iD-hUZ" firstAttribute="top" secondItem="kZK-xa-Mki" secondAttribute="top" constant="25" id="VMw-pl-JNL"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="trailing" secondItem="D8X-AW-uv9" secondAttribute="trailing" id="Wex-Ch-07r"/>
                             <constraint firstItem="D8X-AW-uv9" firstAttribute="top" secondItem="Z2V-vO-xah" secondAttribute="bottom" constant="-20" id="Xl4-Ef-Bz6"/>
                             <constraint firstItem="xZe-Ri-ijg" firstAttribute="leading" secondItem="V2C-eg-4kn" secondAttribute="leading" id="ZZ6-8x-akq"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="top" secondItem="D8X-AW-uv9" secondAttribute="top" id="cEi-gE-U2O"/>
+                            <constraint firstItem="n6y-kB-cdC" firstAttribute="bottom" secondItem="D8X-AW-uv9" secondAttribute="bottom" id="e4x-qS-1TP"/>
                             <constraint firstItem="2S1-Cm-tew" firstAttribute="width" secondItem="kZK-xa-Mki" secondAttribute="width" multiplier="331:375" id="fV8-na-p7d"/>
                             <constraint firstItem="xZe-Ri-ijg" firstAttribute="trailing" secondItem="V2C-eg-4kn" secondAttribute="trailing" id="fWu-yJ-wOR"/>
                             <constraint firstAttribute="trailing" secondItem="D8X-AW-uv9" secondAttribute="trailing" id="g52-k5-5nn"/>
@@ -137,7 +149,7 @@
                                             <color key="tintColor" red="0.92941176470588238" green="0.37647058823529411" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" backgroundImage="icon_plus"/>
                                             <connections>
-                                                <segue destination="lKz-u5-Uhx" kind="presentation" id="JXu-uP-U2R"/>
+                                                <action selector="pressBuild:" destination="iq1-bn-0j9" eventType="touchUpInside" id="IFj-O3-sDP"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Journals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-uO-Tkr">
@@ -169,7 +181,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gw6-w6-LcB">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gw6-w6-LcB">
                                                     <rect key="frame" x="19.5" y="10" width="335" height="140"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="140" id="xA6-Oj-oHP"/>
@@ -209,7 +221,6 @@
                                             <outlet property="journalImageView" destination="gw6-w6-LcB" id="HRN-pH-swu"/>
                                             <outlet property="journalTitleLabel" destination="qfA-Io-4ku" id="MaY-ou-1A1"/>
                                             <outlet property="roundView" destination="GOz-Nv-xIW" id="1LG-cq-Gpp"/>
-                                            <segue destination="lKz-u5-Uhx" kind="presentation" id="2MQ-S7-8PC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -228,7 +239,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="journalsTableview" destination="hS6-JY-DWg" id="mR4-X7-FUq"/>
                         <outlet property="titleLabel" destination="ZPi-uO-Tkr" id="aj0-fL-8kk"/>
+                        <segue destination="lKz-u5-Uhx" kind="presentation" identifier="build" id="PMF-Nu-ANG"/>
+                        <segue destination="lKz-u5-Uhx" kind="presentation" identifier="check" id="4GC-GI-aDF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUh-oD-isn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,6 +256,6 @@
         <image name="icon_plus" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JXu-uP-U2R"/>
+        <segue reference="PMF-Nu-ANG"/>
     </inferredMetricsTieBreakers>
 </document>

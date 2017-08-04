@@ -20,6 +20,9 @@
 		B2BA29A01F340B870004494C /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA299F1F340B870004494C /* JournalTableViewCell.swift */; };
 		B2BA29A21F340C5A0004494C /* JournalStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29A11F340C5A0004494C /* JournalStruct.swift */; };
 		B2BA29A41F341B4B0004494C /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29A31F341B4B0004494C /* JournalViewController.swift */; };
+		B2BA29A61F3422520004494C /* JournalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29A51F3422520004494C /* JournalManager.swift */; };
+		B2BA29A81F3425980004494C /* JournalsViewControllerExtension2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29A71F3425980004494C /* JournalsViewControllerExtension2.swift */; };
+		B2BA29AA1F3429230004494C /* JournalViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA29A91F3429230004494C /* JournalViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		B2BA299F1F340B870004494C /* JournalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		B2BA29A11F340C5A0004494C /* JournalStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalStruct.swift; sourceTree = "<group>"; };
 		B2BA29A31F341B4B0004494C /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		B2BA29A51F3422520004494C /* JournalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalManager.swift; sourceTree = "<group>"; };
+		B2BA29A71F3425980004494C /* JournalsViewControllerExtension2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalsViewControllerExtension2.swift; sourceTree = "<group>"; };
+		B2BA29A91F3429230004494C /* JournalViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewControllerExtension.swift; sourceTree = "<group>"; };
 		D08B242512D28FAC5947AA02 /* Pods_Journal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Journal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,8 +92,11 @@
 				B2BA29791F34004A0004494C /* AppDelegate.swift */,
 				B2BA297B1F34004A0004494C /* JournalsViewController.swift */,
 				B2BA299B1F340AB80004494C /* JournalsViewControllerExtensionTableView.swift */,
+				B2BA29A71F3425980004494C /* JournalsViewControllerExtension2.swift */,
 				B2BA29A31F341B4B0004494C /* JournalViewController.swift */,
+				B2BA29A91F3429230004494C /* JournalViewControllerExtension.swift */,
 				B2BA29A11F340C5A0004494C /* JournalStruct.swift */,
+				B2BA29A51F3422520004494C /* JournalManager.swift */,
 				B2BA297D1F34004A0004494C /* Main.storyboard */,
 				B2BA299F1F340B870004494C /* JournalTableViewCell.swift */,
 				B2BA29801F34004A0004494C /* Assets.xcassets */,
@@ -252,7 +261,10 @@
 				B2BA299A1F3406900004494C /* UIColorAndUIFontExtension.swift in Sources */,
 				B2BA29A01F340B870004494C /* JournalTableViewCell.swift in Sources */,
 				B2BA29981F34052A0004494C /* JournalModel.xcdatamodeld in Sources */,
+				B2BA29A61F3422520004494C /* JournalManager.swift in Sources */,
+				B2BA29AA1F3429230004494C /* JournalViewControllerExtension.swift in Sources */,
 				B2BA297C1F34004A0004494C /* JournalsViewController.swift in Sources */,
+				B2BA29A81F3425980004494C /* JournalsViewControllerExtension2.swift in Sources */,
 				B2BA297A1F34004A0004494C /* AppDelegate.swift in Sources */,
 				B2BA29A21F340C5A0004494C /* JournalStruct.swift in Sources */,
 				B2BA299C1F340AB80004494C /* JournalsViewControllerExtensionTableView.swift in Sources */,
@@ -421,6 +433,7 @@
 				B2BA298A1F34004A0004494C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
