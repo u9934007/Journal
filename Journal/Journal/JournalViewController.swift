@@ -145,9 +145,37 @@ class JournalViewController: UIViewController {
     @IBAction func selectImage(_ sender: Any) {
 
         let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = self
-        self.present(imagePicker, animated: true, completion: nil)
+
+        let alertController = UIAlertController(
+            title: "Photo Source",
+            message: "Choose a source",
+            preferredStyle: .actionSheet)
+
+        alertController.addAction(UIAlertAction(title: "Camera", style: .default, handler: {(_: UIAlertAction) in
+
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+
+            } else {
+
+                print("Camera no availabe")
+
+            }
+
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: {(_: UIAlertAction) in
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+
+        self.present(alertController, animated: true, completion: nil)
 
     }
 
