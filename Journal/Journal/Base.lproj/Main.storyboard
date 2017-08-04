@@ -25,7 +25,29 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ioq-rQ-MV6" customClass="RadialGradientView" customModule="Journal" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-d3-M6S">
+                                        <rect key="frame" x="0.0" y="186" width="375" height="2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="B2k-y5-KCe"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FV7-bY-wYY">
+                                        <rect key="frame" x="143" y="222" width="88.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1333333333" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gQs-d3-M6S" firstAttribute="centerX" secondItem="Ioq-rQ-MV6" secondAttribute="centerX" id="4oe-2d-6Eh"/>
+                                    <constraint firstItem="gQs-d3-M6S" firstAttribute="centerY" secondItem="Ioq-rQ-MV6" secondAttribute="centerY" id="7g0-LO-5vj"/>
+                                    <constraint firstItem="FV7-bY-wYY" firstAttribute="top" secondItem="gQs-d3-M6S" secondAttribute="bottom" constant="34" id="GSx-zI-3bj"/>
+                                    <constraint firstItem="FV7-bY-wYY" firstAttribute="centerX" secondItem="Ioq-rQ-MV6" secondAttribute="centerX" id="Lay-3v-hIP"/>
+                                    <constraint firstItem="gQs-d3-M6S" firstAttribute="leading" secondItem="Ioq-rQ-MV6" secondAttribute="leading" id="MMP-rC-TPW"/>
+                                    <constraint firstAttribute="trailing" secondItem="gQs-d3-M6S" secondAttribute="trailing" id="Ynu-pk-g9a"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="InsideColor">
                                         <color key="value" red="0.26274509800000001" green="0.3411764706" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
